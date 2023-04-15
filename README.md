@@ -1,2 +1,2 @@
 # cv-react-project
-This project must be built and deploy to show my personal page.
+This project must be built and deployed in order to show my personal web-page.

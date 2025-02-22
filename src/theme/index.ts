@@ -1,12 +1,12 @@
-import { createTheme } from '@mui/material/styles';
-import { grey } from '@mui/material/colors';
+import { createTheme } from "@mui/material/styles";
+import { grey } from "@mui/material/colors";
 
 export const blackTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
     background: {
-        default: grey[900]
-    }
+      default: grey[900],
+    },
   },
   breakpoints: {
     values: {
@@ -18,16 +18,16 @@ export const blackTheme = createTheme({
     },
   },
   typography: {
-    fontSize: 13
+    fontSize: 13,
   },
 });
 
 export const lightTheme = createTheme({
   palette: {
-    mode: 'light',
+    mode: "light",
     background: {
-        default: grey[200]
-    }
+      default: grey[200],
+    },
   },
   breakpoints: {
     values: {
@@ -39,7 +39,7 @@ export const lightTheme = createTheme({
     },
   },
   typography: {
-    fontSize: 13
+    fontSize: 13,
   },
 });
 

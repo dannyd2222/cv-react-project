@@ -6,6 +6,7 @@ const nextConfig = {
     return {
       '/': { page: '/' },
       '/login': { page: '/login' },
+      '/joy': { page: '/joy' },
     };
   },
   async redirects() {

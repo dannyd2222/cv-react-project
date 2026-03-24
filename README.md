@@ -131,6 +131,8 @@ If your default branch is not `main`, edit the `on.push.branches` list in the wo
 
 You can still deploy manually by copying `build/` if you prefer not to use Actions.
 
+**Troubleshooting:** If **Upload artifacts** fails with `tar: out: Cannot open`, the workflow is archiving the wrong folder. Next.js static export normally writes to `out/`, but this project sets `distDir: 'build'` in `next.config.js`, so the deployable files are under **`build/`**. Ensure `actions/upload-pages-artifact` uses `path: build` (not `out`). That error is unrelated to GitHub’s **Node.js 20 deprecation** warnings on the runner: those refer to the JavaScript runtime used *inside* official actions (`checkout`, `cache`, `configure-pages`, etc.). Updating action versions (as in the workflow file) reduces the noise; your app is still built with the `node-version` you set in `setup-node`.
+
 ## Author
 
 * **Daniele Dalle Nogare** - *Full Stack Developer* - [Linkedin page](https://www.linkedin.com/in/danieledallenogare)
